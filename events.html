@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Ensure the footer stays at the bottom */
+            min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+        }
+
+        .navbar {
+            background-color: #004d40;
+            padding: 1rem 2rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-menu {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-menu li {
+            margin: 0;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            color: #80cbc4;
+        }
+
+        .footer-content {
+            text-align: center;
+            padding: 1rem;
+            background-color: #004d40;
+            color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer-content a {
+            color: #80cbc4;
+            text-decoration: none;
+        }
+
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1; /* Allow the content container to grow and fill space */
+            padding: 20px;
+        }
+
+        .event-list {
+            padding: 0;
+            margin: 2rem 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        .event-list h2 {
+            color: #004d40;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .event-list ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .event-list li {
+            font-size: 1.2rem;
+            color: #004d40;
+            margin-bottom: 1rem;
+        }
+
+        .event-date {
+            position: relative;
+            display: inline-block;
+            font-style: italic;
+            cursor: pointer;
+            color: #004d40;
+        }
+
+        .event-date::before {
+            content: "Hover for date";
+            opacity: 1;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .event-date::after {
+            content: "Date: TBD";
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+            white-space: nowrap;
+        }
+
+        .event-date:hover::before {
+            opacity: 0;
+        }
+
+        .event-date:hover::after {
+            opacity: 1;
+        }
+
+        .animate {
+            opacity: 0;
+            transform: translateY(100px);
+            animation: flyUp 1s ease-out forwards;
+        }
+
+        h1.animate {
+            animation-delay: 0.2s;
+        }
+
+        h2.animate {
+            animation-delay: 0.4s;
+        }
+
+        p.animate {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes flyUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>    
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">CITY OF LAS VEGAS</div>
+        <ul class="navbar-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+    
+    <div class="content-container">
+        <h1 class="animate">Upcoming Events</h1>
+        <div class="event-list">
+            <ul>
+                <li>
+                    <strong>Computer Basics for Seniors</strong><br>
+                    <span class="event-date"></span>
+                    <p>Learn how to use a computer, including basic functions such as internet browsing, email, and word processing. Tailored for senior citizens.</p>
+                </li>
+                <li>
+                    <strong>Smartphone and Tablet Workshops</strong><br>
+                    <span class="event-date"></span>
+                    <p>Hands-on workshops teaching how to navigate and make the most of smartphones and tablets, including app usage and security tips.</p>
+                </li>
+                <li>
+                    <strong>FASFA, Resume Building, and Interview Skills Workshops</strong><br>
+                    <span class="event-date"></span>
+                    <p>Prepare for college and job applications with our workshops on filling out FAFSA forms, building effective resumes, and acing interviews.</p>
+                </li>
+                <li>
+                    <strong>Esports Competitions</strong><br>
+                    <span class="event-date"></span>
+                    <p>Join our competitive gaming events featuring popular games and a chance to win exciting prizes.</p>
+                </li>
+                <li>
+                    <strong>Computer Building Workshops</strong><br>
+                    <span class="event-date"></span>
+                    <p>Learn how to build your own computer from scratch, including selecting components, assembling hardware, and troubleshooting.</p>
+                </li>
+                <li>
+                    <strong>Career Explorations Events</strong><br>
+                    <span class="event-date"></span>
+                    <p>Explore various career paths with guest speakers and hands-on activities related to different professions in technology and beyond.</p>
+                </li>
+                <li>
+                    <strong>Robotics Building and Competition Events</strong><br>
+                    <span class="event-date"></span>
+                    <p>Participate in robotics workshops and competitions, learning about robot design, programming, and teamwork.</p>
+                </li>
+                <li>
+                    <strong>Back to School, Mental Health, and Wellness Fair</strong><br>
+                    <span class="event-date"></span>
+                    <p>Attend our fair to gather resources and information on preparing for the school year, mental health support, and overall wellness.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Strong Future Technology Training Center. All rights reserved.</p>
+            <p>Contact us at: <a href="mailto:info@strongfuturetech.com">info@strongfuturetech.com</a></p>
+        </div>
+    </footer>
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

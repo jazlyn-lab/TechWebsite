@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Ensure the footer stays at the bottom */
+            min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+        }
+
+        .navbar {
+            background-color: #004d40;
+            padding: 1rem 2rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-menu {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-menu li {
+            margin: 0;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            color: #80cbc4;
+        }
+
+        .footer-content {
+            text-align: center;
+            padding: 1rem;
+            background-color: #004d40;
+            color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer-content a {
+            color: #80cbc4;
+            text-decoration: none;
+        }
+
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1; /* Allow the content container to grow and fill space */
+            padding: 2rem;
+        }
+
+        .program-list {
+            padding: 0;
+            margin: 2rem 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        .program-list li {
+            margin-bottom: 2.5rem;
+            font-size: 1.2rem;
+            color: #004d40;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(20px); /* Initial position for animation */
+            transition: transform 0.5s ease-in-out; /* Faster transition for scroll effect */
+        }
+
+        .program-list li.visible {
+            transform: translateY(0); /* Final position when in view */
+        }
+
+        .program-list li img {
+            max-width: 50%; /* Adjusted to 50% of the container's width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Optional: add some border radius */
+            margin-bottom: 1rem; /* Space between the image and text */
+            opacity: 0; /* Initial opacity for fade-in effect */
+            transition: opacity 0.5s ease-in-out; /* Faster transition for fade-in effect */
+        }
+
+        .program-list li img.visible {
+            opacity: 1; /* Final opacity when in view */
+        }
+
+        .program-list li h2 {
+            background-color: #004d40; /* Dark green background */
+            color: #fff; /* White text */
+            padding: 0.5rem 1rem; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners */
+            display: inline-block; /* Only apply background to text */
+            margin-bottom: 1rem; /* Space below the title */
+        }
+    </style>
+</head>    
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">CITY OF LAS VEGAS</div>
+        <ul class="navbar-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+    
+    <div class="content-container">
+        <h1 class="animate">Available Programs</h1>
+        <ul class="program-list">
+            <li>
+                <img class="fade-in" src="images/codingandapp.jpg" alt="Coding and App Development">
+                <h2>Coding and App Development</h2>
+                <p>Learn the fundamentals of coding and app development using various programming languages and tools.</p>
+            </li>
+            <li>
+                <img class="fade-in" src="images/esportsandvr.jpg" alt="Esports, Streaming, and Virtual Reality Gaming">
+                <h2>Esports, Streaming, and Virtual Reality Gaming</h2>
+                <p>Engage in competitive gaming, learn streaming techniques, and explore the world of VR gaming.</p>
+            </li>
+            <li>
+                <img class="fade-in" src="images/production.jpg" alt="Video, Music, Game, and Event Production">
+                <h2>Video, Music, Game, and Event Production</h2>
+                <p>Discover the art of production in video, music, gaming, and event management.</p>
+            </li>
+            <li>
+                <img class="fade-in" src="images/photographyandgraphic.jpg" alt="Photography and Graphic Design">
+                <h2>Photography and Graphic Design</h2>
+                <p>Develop your skills in photography and graphic design with hands-on projects and expert guidance.</p>
+            </li>
+            <li>
+                <img class="fade-in" src="images/cybersecurity.jpg" alt="Cybersecurity">
+                <h2>Cybersecurity</h2>
+                <p>Understand the principles of cybersecurity and how to protect digital assets and information.</p>
+            </li>
+            <li>
+                <img class="fade-in" src="images/healthcare.jpg" alt="ESL, HSE, and Community Healthcare Worker Classes">
+                <h2>ESL, HSE, and Community Healthcare Worker Classes</h2>
+                <p>In partnership with the College of Southern Nevada, we offer classes in ESL, HSE, and community healthcare work.</p>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Strong Future Technology Training Center. All rights reserved.</p>
+            <p>Contact us at: <a href="mailto:info@strongfuturetech.com">info@strongfuturetech.com</a></p>
+        </div>
+    </footer>
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to check if an element is in view
+            function isElementInView(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Function to add the 'visible' class to elements that are in view
+            function handleScroll() {
+                const fadeInElements = document.querySelectorAll('.fade-in');
+                fadeInElements.forEach(function(el) {
+                    if (isElementInView(el)) {
+                        el.classList.add('visible');
+                    }
+                });
+
+                // Also check for list items to handle their transition
+                const listItems = document.querySelectorAll('.program-list li');
+                listItems.forEach(function(el) {
+                    if (isElementInView(el)) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScroll);
+
+            // Initial check in case elements are already in view
+            handleScroll();
+        });
+    </script>
+</body>
+</html>
