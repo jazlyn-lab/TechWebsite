@@ -89,6 +89,17 @@
             flex: 1; /* Allow the content container to grow and fill space */
         }
 
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 150px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
         .carousel {
             width: 80%; /* Adjust to control the carousel's width */
             max-width: 800px; /* Maximum width of the carousel */
@@ -129,7 +140,9 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar-brand">CITY OF LAS VEGAS</div>
+        <div class="navbar-brand">
+            CITY OF LAS VEGAS
+        </div>
         <ul class="navbar-menu">
             <li><a href="home.html">Home</a></li>
             <li><a href="programs.html">Programs</a></li>
